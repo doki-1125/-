@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>登录/注册</title>
+    <style>
+        /* 样式表 */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 50px;
+        }
+        .tabs {
+            display: flex;
+            margin-top: 50px;
+        }
+        .tab {
+            margin-right: 20px;
+            cursor: pointer;
+            color: #999;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease-in-out;
+        }
+        .tab.active {
+            color: #333;
+            border-bottom-color: #f44336;
+        }
+        form {
+            width: 400px;
+            margin: 50px auto;
+            border: 2px solid #ccc;
+            padding: 50px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #f44336;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab active" data-tab="login-tab">登录</div>
+        <div class="tab" data-tab="register-tab">注册</div>
+    </div>
+    
+    <form id="login-tab" action="#" method="POST">
+        <h2>登录</h2>
+        <label for="username">用户名:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">密码:</label>
+        <input type="password" name="password" id="password" required>
+        <center><input type="submit" value="登录"></center>
+    </form>
+    
+    <form id="register-tab" action="#" method="POST" style="display:none;">
+        <h2>注册</h2>
+        <label for="username">用户名:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="email">电子邮件:</label>
+        <input type="email" name="email" id="email" required>
+        <label for="password">密码:</label>
+        <input type="password" name="password" id="password" required>
+        <label for="confirm_password">确认密码:</label>
+        <input type="password" name="confirm_password" id="confirm_password" required>
+        <center><input type="submit" value="注册"></center>
+    </form>
+    
+    <script>
+        // 选项卡切换
+        let tabs = document.querySelectorAll('.tab');
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                // 隐藏所有表单
+                document.querySelectorAll('form').forEach(function(form) {
+                    form.style.display = 'none';
+                });
+                // 显示当前表单
+                let tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).style.display = 'block';
+                // 激活当前选项卡
+                tabs.forEach(function(tab) {
+                    tab.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
