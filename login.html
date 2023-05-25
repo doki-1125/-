@@ -9,6 +9,8 @@
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 50px;
+            background-image: url(https://inews.gtimg.com/newsapp_bt/0/13438852525/1000);
+            background-size:cover;
         }
         .tabs {
             display: flex;
@@ -52,6 +54,18 @@
             border: none;
             cursor: pointer;
         }
+        .link-container{
+            position:absolute;
+            top:10px;
+            right:10px;
+        }
+        .link-container{
+            color:#333333;
+            text-decoration-color:#f44336;
+        }
+        a{
+            color:#ffffff;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +73,11 @@
         <div class="tab active" data-tab="login-tab">登录</div>
         <div class="tab" data-tab="register-tab">注册</div>
     </div>
-    
+
+    <div class="link-container">
+        <li><a href="main.html">返回首页</a></li>
+    </div>
+
     <form id="login-tab" action="#" method="POST">
         <h2>登录</h2>
         <label for="username">用户名:</label>
