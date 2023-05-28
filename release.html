@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>发布招聘信息</title>
+    <style>
+        /* 样式表 */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 50px;
+            background-image: url(https://inews.gtimg.com/newsapp_bt/0/13438852525/1000);
+            background-size:cover;
+        }
+        .tabs {
+            display: flex;
+            margin-top: 50px;
+        }
+        .tab {
+            margin-right: 20px;
+            cursor: pointer;
+            color: #999;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease-in-out;
+        }
+        .tab.active {
+            color: #333;
+            border-bottom-color: #f44336;
+        }
+        form {
+            width: 400px;
+            margin: 50px auto;
+            border: 2px solid #ccc;
+            padding: 50px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="position"], input[type="demand"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="number"], input[type="salary"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #f44336;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .link-container{
+            position:absolute;
+            top:10px;
+            right:10px;
+        }
+        .link-container{
+            color:#333333;
+            text-decoration-color:#f44336;
+        }
+        a{
+            color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="tabs">
+    <div class="tab active" data-tab="release-tab">发布</div>
+</div>
+
+<div class="link-container">
+    <li><a href="main.html">返回首页</a></li>
+</div>
+
+<form id="release-tab" action="#" method="POST">
+    <h2>发布信息</h2>
+    <label for="position">招聘职位：</label>
+    <input type="text" name="position" id="position" required>
+    <label for="salary">薪资:</label>
+    <input type="number" name="salary" id="salary" required>
+    <label for="demand">职位要求：</label>
+    <input type="text" name="demand" id="demand" required>
+    <center><input type="submit" value="发布"></center>
+</form>
+
+</body>
+</html>

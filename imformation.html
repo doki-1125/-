@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            background-image: url(https://inews.gtimg.com/newsapp_bt/0/13438852525/1000);
+            background-size:cover;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid transparent;
+        }
+        form {
+            width: 500px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,1);
+
+        }
+        label {
+            display: block;
+            margin-bottom: 20px;
+        }
+        input[type=text], input[type=email], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            float: right;
+        }
+        .link-container{
+            position:absolute;
+            top:10px;
+            right:10px;
+        }
+        .link-container{
+            color:#333333;
+            text-decoration-color:#f44336;
+        }
+        a{
+            color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+<h1>完善个人信息</h1>
+<div class="link-container">
+    <li><a href="main.html">返回首页</a></li>
+</div>
+
+<form action="#" method="post">
+
+    <label for="phone">电话号码：</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="address">地址：</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="gender">性别：</label>
+    <select id="gender" name="gender">
+        <option value="">请选择</option>
+        <option value="male">男</option>
+        <option value="female">女</option>
+    </select>
+
+    <input type="submit" value="保存">
+</form>
+</body>
+</html>
